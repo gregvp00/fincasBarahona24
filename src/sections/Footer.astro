@@ -1,0 +1,41 @@
+---
+import footerNavData from "@/data/footerData.json";
+---
+
+<footer class="bg-white">
+  <div class="py-16 mx-auto w-full md:max-w-[80%] lg:max-w-[70%] px-8 py-16">
+    <div
+      class="mb-12 grid grid-cols-2 gap-8 md:mb-16 md:grid-cols-8 lg:grid-cols-12"
+    >
+      <div class="col-span-6">
+        <a href="/">
+          <img src="/hero-logo.svg" alt="logo" class="h-16" />
+        </a>
+      </div>
+      <div class="col-span-6">
+        <div class="grid grid-cols-2 md:grid-cols-8 lg:grid-cols-12">
+          {
+            footerNavData.map((footerLinks) => (
+              <div class="col-span-1 md:col-span-4">
+                <h3 class="font-bold text-base mb-2">{footerLinks.title}</h3>
+                <ul class="mt-4">
+                  {footerLinks.items.map((footerItem) => (
+                    <li class="gap-2">
+                      <a
+                        class="mb-2 block w-auto font-medium transition-colors duration-300 hover:text-blue-500"
+                        href={footerItem.href}
+                        target={footerItem.target}
+                      >
+                        {footerItem.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

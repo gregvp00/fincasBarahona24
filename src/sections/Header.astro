@@ -1,0 +1,20 @@
+---
+import Nav from "@/components/Nav.astro";
+import navData from "@/data/navData.json";
+---
+
+<header
+  id="header"
+  class="header fixed left-0 w-full z-30 top-0 bg-white backdrop-filter backdrop-blur-md bg-opacity-50"
+>
+  <section class="header--container flex items-stretch justify-between mx-6">
+    <div class="">
+      <a href="/">
+        <img src="/hero-logo.svg" alt="logo" class="h-12" />
+      </a>
+    </div>
+    <section class="flex items-center">
+      <Nav navItems={navData} />
+    </section>
+  </section>
+</header>
