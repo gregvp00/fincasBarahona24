@@ -2,6 +2,5 @@
 > This site is under construction.
 
 <p align=center width=350>
-  <img align=center width=200 src="https://fincasbarahona.com/_astro/hero-logo.svg" />
-  <h4 align=center> Web de alojamientos Fincas Barahona </h4 >
+  <img align=left width=200 src="https://raw.githubusercontent.com/gregvp00/fincasBarahona24/cc9d93cab3950c5cce9ce257f136af540b3ffe54/public/hero-logo.svg" alt="logo"  />
 </p>
