@@ -1,11 +1,27 @@
 [
-  { "name": "Features", "to": "#features", "href": "/#features" },
-  { "name": "Testimonials", "to": "#testimonials", "href": "/#testimonials" },
-  { "name": "FAQ", "to": "#faq", "href": "/#faq" },
+  {
+    "name": "Features",
+    "to": "#features",
+    "href": "/#features",
+    "extraclass": ""
+  },
+  {
+    "name": "Testimonials",
+    "to": "#testimonials",
+    "href": "/#testimonials",
+    "extraclass": ""
+  },
+  {
+    "name": "FAQ",
+    "to": "#faq",
+    "href": "/#faq",
+    "extraclass": ""
+  },
   {
     "name": "Contact",
     "href": "tel:+34648648950",
     "isArrow": true,
-    "target": "_blank"
+    "target": "_blank",
+    "extraclass": ""
   }
 ]

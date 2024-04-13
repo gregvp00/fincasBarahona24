@@ -4,83 +4,107 @@ import { Icon } from "astro-icon/components";
 const { navItems } = Astro.props;
 ---
 
-<nav class="header-nav">
-  <div class="header-nav--container">
-    <button
-      type="button"
-      class="mobile-menu"
-      aria-controls="navbar-dropdown"
-      aria-expanded="false"
-    >
-      <span class="sr-only">Open main menu</span>
-      <Icon name="mdi:menu" class="h-6 w-auto text-black" />
-    </button>
-    <div class="header-nav--menu-container z-20 hide" id="navbar-default">
-      <ul class="header-nav--menu">
-        {
-          navItems.map((item) => (
-            <li class="header-nav--menu-item">
-              <a
-                href={item.href}
-                class={`menu-item--link flex items-center ${
-                  Astro.url.pathname === item.href ? "active" : ""
-                }
-                                    `}
-                target={item.target ? item.target : "_self"}
-              >
-                {item.name}
-                {item.isArrow && (
-                  <span class="ml-2 inline-block text-sm font-medium text-inherit">
-                    <Icon name="mdi:arrow-top-right" className="h-6 w-auto" />
-                  </span>
-                )}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
+<div class="hamburger-container transition md:flex md:items-center">
+  <input
+    class="checkbox md:hidden absolute opacity-0"
+    type="checkbox"
+    id="hamburger-toggle"
+    aria-label="Toggle Navigation"
+  />
+  <label
+    class="hamburger md:hidden w-8 h-8 relative block z-10 cursor-pointer pt-1 transition"
+    for="hamburger-toggle"
+  >
+    <span class="slice block w-full h-[2px] bg-[#36374c] transition"></span>
+    <span class="slice block w-full h-[2px] bg-[#36374c] transition"></span>
+    <span class="slice block w-full h-[2px] bg-[#36374c] transition"></span>
+  </label>
+  <div class="drawer fixed md:relative md:block md:w-auto transition">
+    <ul class="nav-list p-0 list-none md:my-0 md:flex md:gap-6">
+      {
+        navItems.map((item) => (
+          <li class="nav-list-item p-2 md:p-0 md:inline-block">
+            <a
+              href={item.href}
+              class={
+                "text-[#36374c] md:visible md:flex transition " +
+                item.extraclass
+              }
+              target={item.target ? item.target : "_self"}
+            >
+              {item.name}
+              {item.isArrow && (
+                <span class="ml-2 inline-block text-sm">
+                  <Icon name="mdi:arrow-top-right" class="h-6 w-auto" />
+                </span>
+              )}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
   </div>
-</nav>
+</div>
 
-<script>
-  let isNavOpen = false;
-  const navButton = document.querySelectorAll(".header-nav--container button");
-  const navListItems = document.querySelectorAll(
-    ".header-nav--menu .header-nav--menu-item .menu-item--link"
-  );
-
-  const toggleNav = () => {
-    const navContainer = document.getElementById("navbar-default");
-
-    if (isNavOpen) {
-      navContainer?.classList.remove("show");
-      navContainer?.classList.add("hide");
-    } else {
-      navContainer?.classList.remove("hide");
-      navContainer?.classList.add("show");
+<style>
+  @media only screen and (max-width: 768px) {
+    .hamburger-container {
+      max-height: max-content;
+      max-width: max-content;
+    }
+    /* Show an outline when the hamburger is selected using the keyboard. Older browsers don't support :focus-visible, so we will just use :focus here. */
+    .hamburger-container .checkbox:focus ~ .hamburger {
+      /* Not all browsers support outline: auto, so set a sensible fallback outline. */
+      outline: 2px solid white;
+      outline: auto;
+      outline-offset: 4px;
     }
 
-    isNavOpen = !isNavOpen;
-  };
+    /* For newer browsers that do support :focus-visible, hide the outline when the checkbox isn't selected with the keyboard. */
+    @supports selector(:focus-visible) {
+      .hamburger-container .checkbox:not(:focus-visible) ~ .hamburger {
+        outline: none;
+      }
+    }
 
-  const closeNav = () => {
-    const navContainer = document.getElementById("navbar-default");
+    /* Make the focusable elements in the drawer visible when it is open. */
+    .hamburger-container .checkbox:checked ~ .drawer a {
+      visibility: visible;
+    }
 
-    navContainer?.classList.remove("show");
-    navContainer?.classList.add("hide");
-    isNavOpen = false;
-  };
+    .hamburger-container .checkbox:checked ~ .drawer {
+      transform: translateX(0%);
+    }
 
-  navButton.forEach((button) => {
-    button.addEventListener("click", () => {
-      toggleNav();
-    });
-  });
+    .hamburger-container .checkbox:checked ~ .hamburger .slice:nth-child(1) {
+      transform: translateY(12px) rotate(45deg);
+    }
 
-  navListItems.forEach((listItem) => {
-    listItem.addEventListener("click", () => {
-      closeNav();
-    });
-  });
-</script>
+    .hamburger-container .checkbox:checked ~ .hamburger .slice:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger-container .checkbox:checked ~ .hamburger .slice:nth-child(3) {
+      transform: translateY(-12px) rotate(-45deg);
+    }
+
+    .hamburger .slice:not(:first-child) {
+      margin-top: 10px;
+    }
+
+    .drawer {
+      transform: translateX(100%);
+      left: 0px;
+      top: 72px;
+      height: 100vh;
+      width: 100vw;
+      background-color: #f3f5f8;
+      padding: 2rem;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  }
+  a:hover {
+    color: #3b82f6;
+  }
+</style>
