@@ -1,14 +1,5 @@
 ---
 import footerNavData from "@/data/footerData.json";
-
-interface footerNavData {
-  title: string;
-  items: {
-    label: string;
-    href: string;
-    target?: string;
-  };
-}
 ---
 
 <footer class="bg-white">
@@ -33,7 +24,7 @@ interface footerNavData {
                       <a
                         class="mb-2 block w-auto font-medium transition-colors duration-300 hover:text-blue-500"
                         href={footerItem.href}
-                        target={footerItem.target ? footerItem.target : "_self"}
+                        target={footerItem.target}
                       >
                         {footerItem.label}
                       </a>

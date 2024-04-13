@@ -4,15 +4,18 @@
     "items": [
       {
         "label": "Features",
-        "href": "#features"
+        "href": "#features",
+        "target": "_self"
       },
       {
         "label": "Testimonials",
-        "href": "#testimonials"
+        "href": "#testimonials",
+        "target": "_self"
       },
       {
         "label": "FAQ",
-        "href": "#faq"
+        "href": "#faq",
+        "target": "_self"
       }
     ]
   },
