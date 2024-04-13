@@ -1,14 +1,14 @@
 ---
 import { Icon } from "astro-icon/components";
+import navItems from "@/data/navData.json";
 
-interface NavItem {
+interface NavItems {
   href: string;
   extraclass: string;
   target?: string;
   name: string;
   isArrow: boolean;
 }
-const { navItems }: { navItems: NavItem[] } = Astro.props;
 ---
 
 <div class="hamburger-container transition md:flex md:items-center">
@@ -29,7 +29,7 @@ const { navItems }: { navItems: NavItem[] } = Astro.props;
   <div class="drawer fixed md:relative md:block md:w-auto transition">
     <ul class="nav-list p-0 list-none md:my-0 md:flex md:gap-6">
       {
-        navItems.map((item: NavItem) => (
+        navItems.map((item) => (
           <li class="nav-list-item p-2 md:p-0 md:inline-block">
             <a
               href={item.href}
