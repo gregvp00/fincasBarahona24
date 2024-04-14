@@ -1,1 +1,126 @@
-<p>Welcome!</p>
+---
+import { Icon } from "astro-icon/components";
+import homeItems from "@/data/homeItems.json";
+
+interface homeItems {
+  badge: string;
+  title: string;
+  description: string;
+}
+---
+
+<section class="pb-16 h-auto relative">
+  <section class="pt-3 mb-[-20px] z-20 h-[85vh]">
+    <div class="slider z-10">
+      <div class="slide"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+    </div>
+    {
+      homeItems.map((home) => (
+        <>
+          <div class="mb-8 mx-auto relative flex rounded-full bg-white w-max">
+            <span class="inline-flex gap-3 px-4 py-2 justify-center text-center items-center text-sm text-[#475569]">
+              {home.badge}
+              <Icon name="mdi:hand-wave" />
+            </span>
+          </div>
+          <h1 class="mb-6 text-center mx-auto relative text-white drop-shadow  text-5xl font-semibold">
+            {home.title}
+          </h1>
+          <div class="text-center relative text-white drop-shadow-md text-xl">
+            {home.description}
+          </div>
+        </>
+      ))
+    }
+  </section>
+  <section
+    class="*:*:w-full md:*:*:w-80 flex items-stretch justify-center md:space-x-8"
+  >
+    <div class="">
+      <a
+        role="button"
+        href="https://www.airbnb.com/rooms/1110735436061203137"
+        target="_blank"
+        class="px-8 py-2 inline-flex w-max cursor-pointer items-center justify-center gap-3 md:rounded-lg bg-[#b81840] hover:bg-[#e51e51] text-white drop-shadow-md font-semibold transition-colors duration-300"
+        >Book now with Airbnb<Icon name="mdi:arrow-right" class="text-3xl" /></a
+      >
+    </div>
+    <div>
+      <a
+        role="button"
+        href="https://www.booking.com/hotel/es/finca-barahona.en.html"
+        target="_blank"
+        class="px-8 py-2 inline-flex w-max cursor-pointer items-center justify-center gap-3 md:rounded-lg bg-[#003b95] hover:bg-[#2a63b9] text-white drop-shadow-md font-semibold transition-colors duration-300"
+        >Book now with Booking<Icon
+          name="mdi:arrow-right"
+          class="text-3xl"
+        /></a
+      >
+    </div>
+  </section>
+</section>
+
+<style>
+  .slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85vh;
+    background-size: cover;
+    background-clip: padding-box;
+    background-position: center;
+    animation: slider 15s infinite;
+  }
+  .slider .slide:nth-child(1) {
+    background-image: url("/images/Barahona/1.jpg");
+    animation-delay: 0s;
+  }
+
+  .slider .slide:nth-child(2) {
+    background-image: url("/images/Barahona/2.jpg");
+    animation-delay: -2.5s;
+  }
+
+  .slider .slide:nth-child(3) {
+    background-image: url("/images/Bahoruco/1.jpg");
+    animation-delay: -5s;
+  }
+
+  .slider .slide:nth-child(4) {
+    background-image: url("/images/Barahona/3.jpg");
+    animation-delay: -7.5s;
+  }
+
+  .slider .slide:nth-child(5) {
+    background-image: url("/images/Bohechio/1.jpg");
+    animation-delay: -10s;
+  }
+
+  .slider .slide:nth-child(6) {
+    background-image: url("/images/Barahona/4.jpg");
+    animation-delay: -12.5s;
+  }
+
+  @keyframes slider {
+    0%,
+    14%,
+    100% {
+      transform: translateX(0);
+      animation-timing-function: ease;
+    }
+    17% {
+      transform: translateX(-100%);
+      animation-timing-function: step-end;
+    }
+    97% {
+      transform: translateX(100%);
+      animation-timing-function: ease;
+    }
+  }
+</style>
