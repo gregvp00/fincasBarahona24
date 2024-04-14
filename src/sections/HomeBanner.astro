@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
-import homeItems from "@/data/homeItems.json";
+import homeData from "@/data/homeData.json";
 
 interface homeItems {
   badge: string;
@@ -10,18 +10,18 @@ interface homeItems {
 ---
 
 <section class="pb-16 h-auto relative">
-  <section class="pt-3 mb-[-20px] z-20 h-[85vh]">
-    <div class="slider z-10">
-      <div class="slide"></div>
-      <div class="slide"></div>
-      <div class="slide"></div>
-      <div class="slide"></div>
-      <div class="slide"></div>
-      <div class="slide"></div>
-    </div>
-    {
-      homeItems.map((home) => (
-        <>
+  {
+    homeData.map((home) => (
+      <>
+        <section class="pt-3 mb-[-20px] z-20 h-[85vh]">
+          <div class="slider z-10">
+            <div class="slide" />
+            <div class="slide" />
+            <div class="slide" />
+            <div class="slide" />
+            <div class="slide" />
+            <div class="slide" />
+          </div>
           <div class="mb-8 mx-auto relative flex rounded-full bg-white w-max">
             <span class="inline-flex gap-3 px-4 py-2 justify-center text-center items-center text-sm text-[#475569]">
               {home.badge}
@@ -34,35 +34,34 @@ interface homeItems {
           <div class="text-center relative text-white drop-shadow-md text-xl">
             {home.description}
           </div>
-        </>
-      ))
-    }
-  </section>
-  <section
-    class="*:*:w-full md:*:*:w-80 flex items-stretch justify-center md:space-x-8"
-  >
-    <div class="">
-      <a
-        role="button"
-        href="https://www.airbnb.com/rooms/1110735436061203137"
-        target="_blank"
-        class="px-8 py-2 inline-flex w-max cursor-pointer items-center justify-center gap-3 md:rounded-lg bg-[#b81840] hover:bg-[#e51e51] text-white drop-shadow-md font-semibold transition-colors duration-300"
-        >Book now with Airbnb<Icon name="mdi:arrow-right" class="text-3xl" /></a
-      >
-    </div>
-    <div>
-      <a
-        role="button"
-        href="https://www.booking.com/hotel/es/finca-barahona.en.html"
-        target="_blank"
-        class="px-8 py-2 inline-flex w-max cursor-pointer items-center justify-center gap-3 md:rounded-lg bg-[#003b95] hover:bg-[#2a63b9] text-white drop-shadow-md font-semibold transition-colors duration-300"
-        >Book now with Booking<Icon
-          name="mdi:arrow-right"
-          class="text-3xl"
-        /></a
-      >
-    </div>
-  </section>
+        </section>
+        <section class="*:*:w-full md:*:*:w-80 flex items-stretch justify-center md:space-x-8">
+          <div class="">
+            <a
+              role="button"
+              href="https://www.airbnb.com/rooms/1110735436061203137"
+              target="_blank"
+              class="px-8 py-2 inline-flex w-max cursor-pointer items-center justify-center gap-3 md:rounded-lg bg-[#b81840] hover:bg-[#e51e51] text-white drop-shadow-md font-semibold transition-colors duration-300"
+            >
+              {home.buttonAirbnb}
+              <Icon name="mdi:arrow-right" class="text-3xl" />
+            </a>
+          </div>
+          <div>
+            <a
+              role="button"
+              href="https://www.booking.com/hotel/es/finca-barahona.en.html"
+              target="_blank"
+              class="px-8 py-2 inline-flex w-max cursor-pointer items-center justify-center gap-3 md:rounded-lg bg-[#003b95] hover:bg-[#2a63b9] text-white drop-shadow-md font-semibold transition-colors duration-300"
+            >
+              {home.buttonBooking}
+              <Icon name="mdi:arrow-right" class="text-3xl" />
+            </a>
+          </div>
+        </section>
+      </>
+    ))
+  }
 </section>
 
 <style>

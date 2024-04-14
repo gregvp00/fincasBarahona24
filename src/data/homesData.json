@@ -1,0 +1,23 @@
+[
+  {
+    "align": "right",
+    "title": "Casa Barahona",
+    "content": "This spacious holiday home features 4 bedrooms, a flat-screen TV, a fully equipped kitchen with a dishwasher and an oven, 2 bathrooms with a bath, a washing machine and a fireplace. Guests can enjoy the ambience of the surroundings, an outdoor dining area and a private pool.",
+    "icon": "mdi:hand-wave",
+    "images": "/images/Barahona/1.jpg"
+  },
+  {
+    "align": "left",
+    "title": "Casa Bahoruco",
+    "content": "This cozy holiday home features 2 bedrooms, a flat-screen TV, a fully equipped kitchen with a dishwasher and an oven and a bathroom. Guests can enjoy the shared outdoor dining area and the communal pool.",
+    "icon": "mdi:hand-wave",
+    "images": "/images/Bahoruco/1.jpg"
+  },
+  {
+    "align": "right",
+    "title": "Casa Bohechio",
+    "content": "This cozy holiday home features a bedroom, a flat-screen TV, a fully equipped kitchen with a dishwasher and an oven, a bathroom and a fireplace. Guests can enjoy the shared outdoor dining area and the communal pool.",
+    "icon": "mdi:hand-wave",
+    "images": "/images/Bohechio/1.jpg"
+  }
+]

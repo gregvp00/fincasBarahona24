@@ -1,0 +1,58 @@
+---
+import { Icon } from "astro-icon/components";
+import bodyData from "@/data/bodyData.json";
+
+import homesData from "@/data/homesData.json";
+---
+
+<section class="my-0 mx-auto w-full lg:max-w-7xl px-8 grid gap-8">
+  {
+    bodyData.map((body) => (
+      <>
+        <div class="mb-8 mx-auto relative flex rounded-full bg-white w-max">
+          <span class="inline-flex gap-3 px-4 py-2 justify-center text-center items-center text-sm text-[#475569]">
+            {body.badge}
+            <Icon name="mdi:hand-wave" />
+          </span>
+        </div>
+        <h1 class="text-2xl lg:text-4xl text-center mx-auto">{body.title}</h1>
+        <div class="text-base lg:text-xl max-w-3xl text-black/60 text-center mx-auto">
+          {body.description}
+        </div>
+      </>
+    ))
+  }
+  {
+    homesData.map((homes) => (
+      <>
+        <div class="grid md:grid-cols-2 gap-y-8">
+          <div
+            class={`rounded-3xl ${homes.align === "left" ? "md:order-1" : ""}`}
+          >
+            <img src={homes.images} class="h-96 w-96" />
+          </div>
+          <div
+            class={` ${
+              homes.align === "left"
+                ? "md:pr-16 lg:pr-24 xl:pr-32 ml-auto"
+                : "md:pl-16 lg:pl-24 xl:pl-32  mr-auto"
+            } my-auto content text-black/60`}
+          >
+            <h3 class="mb-6 h4 md:h3 font-semibold text-black">
+              {homes.title}
+            </h3>
+            <p>{homes.content}</p>
+            <ul class="space-y-3">
+              <li class="inline-grid grid-flow-col-dense">
+                <Icon
+                  name={homes.icon}
+                  class="w-6 h-6 text-secondary-500 mr-2"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </>
+    ))
+  }
+</section>
