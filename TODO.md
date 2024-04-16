@@ -12,7 +12,7 @@
 -Implementar funcionalidad de notificaciones
 -Realizar pruebas de usabilidad y accesibilidad del sistema
 
-^ Revisar configuración mails//
+Revisar configuración mails//
 
 ## Resolver errores y problemas conocidos:
 
