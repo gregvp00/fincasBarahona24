@@ -28,9 +28,10 @@ import homesData from "@/data/homesData.json";
         <div class="grid md:grid-cols-2 gap-y-8">
           <div
             class={`rounded-3xl ${homes.align === "left" ? "md:order-1" : ""}`}
-          >
-            <img src={homes.images} class="h-96 w-96" />
-          </div>
+          />
+          {homes.images.map((imagesCaroussel) => (
+            <img src={imagesCaroussel} class="h-96 w-96" />
+          ))}
           <div
             class={` ${
               homes.align === "left"
@@ -44,10 +45,12 @@ import homesData from "@/data/homesData.json";
             <p>{homes.content}</p>
             <ul class="space-y-3">
               <li class="inline-grid grid-flow-col-dense">
-                <Icon
-                  name={homes.icon}
-                  class="w-6 h-6 text-secondary-500 mr-2"
-                />
+                {homes.icon.map((roomsIcon) => (
+                  <Icon
+                    name={roomsIcon}
+                    class="w-6 h-6 text-secondary-500 mr-2"
+                  />
+                ))}
               </li>
             </ul>
           </div>
