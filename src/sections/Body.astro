@@ -3,6 +3,8 @@ import { Icon } from "astro-icon/components";
 import bodyData from "@/data/bodyData.json";
 
 import homesData from "@/data/homesData.json";
+
+import "swiper/css";
 ---
 
 <section class="my-0 mx-auto w-full lg:max-w-7xl px-8 grid gap-8">
@@ -22,6 +24,19 @@ import homesData from "@/data/homesData.json";
       </>
     ))
   }
+  <div class="swiper w-96 h-auto">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="/images/Barahona/1.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/Barahona/1.jpg" />
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
   {
     homesData.map((homes) => (
       <>
@@ -29,9 +44,7 @@ import homesData from "@/data/homesData.json";
           <div
             class={`rounded-3xl ${homes.align === "left" ? "md:order-1" : ""}`}
           />
-          {homes.images.map((imagesCaroussel) => (
-            <img src={imagesCaroussel} class="h-96 w-96" />
-          ))}
+
           <div
             class={` ${
               homes.align === "left"
@@ -59,3 +72,18 @@ import homesData from "@/data/homesData.json";
     ))
   }
 </section>
+
+<script>
+  import Swiper from "swiper";
+
+  var swiper = new Swiper(".swiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
