@@ -13,7 +13,15 @@
       "mdi:washing-machine",
       "mdi:fireplace"
     ],
-    "images": ["/images/Barahona/1.jpg", "/images/Barahona/1.jpg"]
+    "images": [
+      {
+        "image": "/images/Barahona/1.jpg",
+        "active": true
+      },
+      {
+        "image": "/images/Bahoruco/1.jpg"
+      }
+    ]
   },
   {
     "align": "left",

@@ -3,8 +3,6 @@ import { Icon } from "astro-icon/components";
 import bodyData from "@/data/bodyData.json";
 
 import homesData from "@/data/homesData.json";
-
-import "swiper/css";
 ---
 
 <section class="my-0 mx-auto w-full lg:max-w-7xl px-8 grid gap-8">
@@ -24,19 +22,6 @@ import "swiper/css";
       </>
     ))
   }
-  <div class="swiper w-96 h-auto">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="/images/Barahona/1.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="/images/Barahona/1.jpg" />
-      </div>
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-  </div>
   {
     homesData.map((homes) => (
       <>
@@ -44,6 +29,41 @@ import "swiper/css";
           <div
             class={`rounded-3xl ${homes.align === "left" ? "md:order-1" : ""}`}
           />
+
+          <section class="carousel-wrapper" aria-label="Gallery">
+            <div class="carousel-containers container">
+              <button
+                class="carousel-btn grid-sm carousel-btn--prev"
+                id="prev"
+                aria-label="Previous Image"
+              >
+                <Icon name="mdi:chevron-left" width="50" />
+              </button>
+              <div class="carousel">
+                <div class="carousel grid-sm">
+                  {homes.images.map((Items) => (
+                    <img
+                      src={Items.image}
+                      alt={homes?.title}
+                      class="carousel-image ${Items?.active && 'active'}"
+                    />
+                  ))}
+                </div>
+              </div>
+              <div class="indicator-container">
+                {homes.images.map((Items) => (
+                  <button class="indicator ${Items?.active && 'active'}" />
+                ))}
+              </div>
+              <button
+                class="carousel-btn grid-sm carousel-btn--next"
+                id="next"
+                aria-label="Next Image"
+              >
+                <Icon name="mdi:chevron-right" width="50" />
+              </button>
+            </div>
+          </section>
 
           <div
             class={` ${
@@ -73,17 +93,18 @@ import "swiper/css";
   }
 </section>
 
-<script>
-  import Swiper from "swiper";
-
-  var swiper = new Swiper(".swiper", {
-    pagination: {
-      el: ".swiper-pagination",
-      type: "progressbar",
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-</script>
+<style>
+  .carousel-wrapper {
+    background: white;
+    position: relative;
+    overflow: hidden;
+  }
+  .carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 50px;
+  }
+  .carousel {
+    display: flex;
+  }
+</style>
