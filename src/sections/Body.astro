@@ -39,9 +39,23 @@ import homesData from "@/data/homesData.json";
               >
                 <Icon name="mdi:chevron-left" width="50" />
               </button>
-              <div class="carousel">
+              <div class="carousels">
                 <div class="carousel grid-sm">
+                  {homes.images.slice(homes.images.length - 1).map((Items) => (
+                    <img
+                      src={Items.image}
+                      alt={homes?.title}
+                      class="carousel-image ${Items?.active && 'active'}"
+                    />
+                  ))}
                   {homes.images.map((Items) => (
+                    <img
+                      src={Items.image}
+                      alt={homes?.title}
+                      class="carousel-image ${Items?.active && 'active'}"
+                    />
+                  ))}
+                  {homes.images.slice(0, 1).map((Items) => (
                     <img
                       src={Items.image}
                       alt={homes?.title}
@@ -97,14 +111,46 @@ import homesData from "@/data/homesData.json";
   .carousel-wrapper {
     background: white;
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
+  }
+  .carousel-wrapper::after,
+  .carousel-wrapper::before {
+    inset-inline: 20%;
   }
   .carousel-container {
     overflow: hidden;
     position: relative;
-    width: 50px;
+    width: 100%;
+    background-color: hsl(var(--background-color));
+  }
+  .carousels {
+    display: flex;
+    text-align: center;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
   }
   .carousel {
-    display: flex;
+    flex: 1 0 100%;
+  }
+  .carousel-image {
+    max-width: 100%;
+    height: auto;
+    /*TODO*/
+    position: absolute;
+  }
+  .carousel-btn {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .carousel-btn--prev {
+    left: 0;
+  }
+  .carousel-btn--next {
+    right: 0;
   }
 </style>

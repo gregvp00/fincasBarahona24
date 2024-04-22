@@ -16,6 +16,6 @@ Revisar configuración mails//
 
 ## Resolver errores y problemas conocidos:
 
-!! Scroll lateral durante las diapositiva (derecha)
+[SOLVED] Scroll lateral durante las diapositiva (derecha)
 
 ^ Lazy load el logo footer
