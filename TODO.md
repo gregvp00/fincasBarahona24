@@ -18,4 +18,4 @@ Revisar configuración mails//
 
 [SOLVED] Scroll lateral durante las diapositiva (derecha)
 
-^ Lazy load el logo footer
+^ Lazy load en el logo footer
