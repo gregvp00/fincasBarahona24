@@ -1,5 +1,8 @@
 ---
 import footerNavData from "@/data/footerData.json";
+
+import { Image } from "astro:assets";
+import logo from "/public/hero-logo.svg";
 ---
 
 <footer class="bg-white">
@@ -9,7 +12,13 @@ import footerNavData from "@/data/footerData.json";
     >
       <div class="col-span-6">
         <a href="/">
-          <img src="/hero-logo.svg" alt="logo" class="h-16" />
+          <Image
+            src={logo}
+            alt="logo"
+            width="auto"
+            height="60em"
+            client:visible
+          />
         </a>
       </div>
       <div class="col-span-6">

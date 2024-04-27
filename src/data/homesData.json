@@ -15,11 +15,64 @@
     ],
     "images": [
       {
-        "image": "/images/Barahona/1.jpg",
-        "active": true
+        "image": "/images/Barahona/1.jpg"
       },
       {
-        "image": "/images/Bahoruco/1.jpg"
+        "image": "/images/Barahona/2.jpg"
+      },
+      {
+        "image": "/images/Barahona/3.jpg"
+      },
+      {
+        "image": "/images/Barahona/4.jpg"
+      },
+      {
+        "image": "/images/Barahona/5.jpg"
+      },
+      {
+        "image": "/images/Barahona/6.jpg"
+      },
+      {
+        "image": "/images/Barahona/7.jpg"
+      },
+      {
+        "image": "/images/Barahona/8.jpg"
+      },
+      {
+        "image": "/images/Barahona/9.jpg"
+      },
+      {
+        "image": "/images/Barahona/10.jpg"
+      },
+      {
+        "image": "/images/Barahona/11.jpg"
+      },
+      {
+        "image": "/images/Barahona/12.jpg"
+      },
+      {
+        "image": "/images/Barahona/13.jpg"
+      },
+      {
+        "image": "/images/Barahona/14.jpg"
+      },
+      {
+        "image": "/images/Barahona/15.jpg"
+      },
+      {
+        "image": "/images/Barahona/16.jpg"
+      },
+      {
+        "image": "/images/Barahona/17.jpg"
+      },
+      {
+        "image": "/images/Barahona/18.jpg"
+      },
+      {
+        "image": "/images/Barahona/19.jpg"
+      },
+      {
+        "image": "/images/Barahona/20.jpg"
       }
     ]
   },
@@ -28,13 +81,69 @@
     "title": "Casa Bahoruco",
     "content": "This cozy holiday home features 2 bedrooms, a flat-screen TV, a fully equipped kitchen with a dishwasher and an oven and a bathroom. Guests can enjoy the shared outdoor dining area and the communal pool.",
     "icon": ["mdi:bed", "mdi:bed", "mdi:shower-head"],
-    "images": ["/images/Bahoruco/1.jpg"]
+    "images": [
+      {
+        "image": "/images/Bahoruco/1.jpg"
+      },
+      {
+        "image": "/images/Bahoruco/2.jpg"
+      },
+      {
+        "image": "/images/Bahoruco/3.jpg"
+      },
+      {
+        "image": "/images/Bahoruco/4.jpg"
+      },
+      {
+        "image": "/images/Bahoruco/5.jpg"
+      },
+      {
+        "image": "/images/Bahoruco/6.jpg"
+      },
+      {
+        "image": "/images/Bahoruco/7.jpg"
+      },
+      {
+        "image": "/images/Bahoruco/8.jpg"
+      },
+      {
+        "image": "/images/Bahoruco/9.jpg"
+      },
+      {
+        "image": "/images/Bahoruco/10.jpg"
+      }
+    ]
   },
   {
     "align": "right",
     "title": "Casa Bohechio",
     "content": "This cozy holiday home features a bedroom, a flat-screen TV, a fully equipped kitchen with a dishwasher and an oven, a bathroom and a fireplace. Guests can enjoy the shared outdoor dining area and the communal pool.",
     "icon": ["mdi:bed", "mdi:shower-head", "mdi:fireplace"],
-    "images": ["/images/Bohechio/1.jpg"]
+    "images": [
+      {
+        "image": "/images/Bohechio/1.jpg"
+      },
+      {
+        "image": "/images/Bohechio/2.jpg"
+      },
+      {
+        "image": "/images/Bohechio/3.jpg"
+      },
+      {
+        "image": "/images/Bohechio/4.jpg"
+      },
+      {
+        "image": "/images/Bohechio/5.jpg"
+      },
+      {
+        "image": "/images/Bohechio/6.jpg"
+      },
+      {
+        "image": "/images/Bohechio/7.jpg"
+      },
+      {
+        "image": "/images/Bohechio/8.jpg"
+      }
+    ]
   }
 ]

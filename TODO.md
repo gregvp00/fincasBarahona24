@@ -16,6 +16,6 @@ Revisar configuración mails//
 
 ## Resolver errores y problemas conocidos:
 
-[SOLVED] Scroll lateral durante las diapositiva (derecha)
+[SOLVED] Scroll lateral durante las diapositiva (derecha) | Section overflow and vh > %
 
-^ Lazy load en el logo footer
+[SOLVED] Lazy load en el logo footer | img > Image component

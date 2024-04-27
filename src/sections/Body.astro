@@ -1,22 +1,31 @@
 ---
 import { Icon } from "astro-icon/components";
+import { Image } from 'astro:assets';
 import bodyData from "@/data/bodyData.json";
 
 import homesData from "@/data/homesData.json";
+
+// import Swiper JS
+import Swiper from 'swiper';
+// import Swiper styles
+import 'swiper/css';
+
 ---
+
+<script src="flowbite/dist/flowbite.min.js"></script>
 
 <section class="my-0 mx-auto w-full lg:max-w-7xl px-8 grid gap-8">
   {
     bodyData.map((body) => (
       <>
-        <div class="mb-8 mx-auto relative flex rounded-full bg-white w-max">
+        <div class="md:mb-2 mb-6 mx-auto relative flex rounded-full bg-white w-max">
           <span class="inline-flex gap-3 px-4 py-2 justify-center text-center items-center text-sm text-[#475569]">
             {body.badge}
             <Icon name="mdi:hand-wave" />
           </span>
         </div>
         <h1 class="text-2xl lg:text-4xl text-center mx-auto">{body.title}</h1>
-        <div class="text-base lg:text-xl max-w-3xl text-black/60 text-center mx-auto">
+        <div class="text-base lg:text-xl max-w-3xl text-black/60 text-center mx-auto pb-6">
           {body.description}
         </div>
       </>
@@ -25,60 +34,43 @@ import homesData from "@/data/homesData.json";
   {
     homesData.map((homes) => (
       <>
-        <div class="grid md:grid-cols-2 gap-y-8">
-          <div
-            class={`rounded-3xl ${homes.align === "left" ? "md:order-1" : ""}`}
-          />
+        <div class="grid md:grid-cols-2 gap-y-8 mb-8 border-b md:border-none border-gray-800/60 border-dashed">
+          <section
+            class={`rounded-3xl carousel-wrapper z-10 ${homes.align === "left" ? "md:order-1" : ""}`}
+            aria-label="Gallery"
+          >
+<div id="gallery" class="relative w-full" data-carousel="slide">
+    <!-- Carousel wrapper -->
+    <div class="relative h-56 overflow-hidden rounded-sm md:h-96">
+         <!-- Items -->
+      {homes.images.map((Items) => (
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <Image src={Items.image} class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="" width="2000" height="924">
+        </div>
+      ))}
+    </div>
+    <!-- Slider indicators -->
+    <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-2 left-1/2">
+      {homes.images.map((Items) => (  
+      <button type="button" class="lg:w-2 lg:h-2 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+      ))}
+    </div>
+    <!-- Slider controls -->
+    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-2 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <Icon name="mdi:chevron-left" class="w-8 h-8 text-white dark:text-gray-800" />
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-2 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <Icon name="mdi:chevron-right" class="w-8 h-8 text-white dark:text-gray-800" />
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
 
-          <section class="carousel-wrapper" aria-label="Gallery">
-            <div class="carousel-containers container">
-              <button
-                class="carousel-btn grid-sm carousel-btn--prev"
-                id="prev"
-                aria-label="Previous Image"
-              >
-                <Icon name="mdi:chevron-left" width="50" />
-              </button>
-              <div class="carousels">
-                <div class="carousel grid-sm">
-                  {homes.images.slice(homes.images.length - 1).map((Items) => (
-                    <img
-                      src={Items.image}
-                      alt={homes?.title}
-                      class="carousel-image ${Items?.active && 'active'}"
-                    />
-                  ))}
-                  {homes.images.map((Items) => (
-                    <img
-                      src={Items.image}
-                      alt={homes?.title}
-                      class="carousel-image ${Items?.active && 'active'}"
-                    />
-                  ))}
-                  {homes.images.slice(0, 1).map((Items) => (
-                    <img
-                      src={Items.image}
-                      alt={homes?.title}
-                      class="carousel-image ${Items?.active && 'active'}"
-                    />
-                  ))}
-                </div>
-              </div>
-              <div class="indicator-container">
-                {homes.images.map((Items) => (
-                  <button class="indicator ${Items?.active && 'active'}" />
-                ))}
-              </div>
-              <button
-                class="carousel-btn grid-sm carousel-btn--next"
-                id="next"
-                aria-label="Next Image"
-              >
-                <Icon name="mdi:chevron-right" width="50" />
-              </button>
-            </div>
           </section>
-
           <div
             class={` ${
               homes.align === "left"
@@ -86,7 +78,7 @@ import homesData from "@/data/homesData.json";
                 : "md:pl-16 lg:pl-24 xl:pl-32  mr-auto"
             } my-auto content text-black/60`}
           >
-            <h3 class="mb-6 h4 md:h3 font-semibold text-black">
+            <h3 class="font-semibold text-xl lg:text-3xl text-black/90 mx-auto pb-6">
               {homes.title}
             </h3>
             <p>{homes.content}</p>
@@ -106,51 +98,3 @@ import homesData from "@/data/homesData.json";
     ))
   }
 </section>
-
-<style>
-  .carousel-wrapper {
-    background: white;
-    position: relative;
-    /*overflow: hidden;*/
-  }
-  .carousel-wrapper::after,
-  .carousel-wrapper::before {
-    inset-inline: 20%;
-  }
-  .carousel-container {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    background-color: hsl(var(--background-color));
-  }
-  .carousels {
-    display: flex;
-    text-align: center;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-  }
-  .carousel {
-    flex: 1 0 100%;
-  }
-  .carousel-image {
-    max-width: 100%;
-    height: auto;
-    /*TODO*/
-    position: absolute;
-  }
-  .carousel-btn {
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    bottom: 0;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  .carousel-btn--prev {
-    left: 0;
-  }
-  .carousel-btn--next {
-    right: 0;
-  }
-</style>
