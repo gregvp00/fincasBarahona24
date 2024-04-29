@@ -17,7 +17,7 @@ import 'swiper/css';
   {
     bodyData.map((body) => (
       <>
-        <div class="md:mb-2 mb-6 mx-auto relative flex rounded-full bg-white w-max">
+        <div class="md:mb-2 mb-6 mx-auto relative flex rounded-full bg-white w-max border border-gray-400/70">
           <span class="inline-flex gap-3 px-4 py-2 justify-center text-center items-center text-sm text-[#475569]">
             {body.badge}
             <Icon name="mdi:hand-wave" />
@@ -38,37 +38,36 @@ import 'swiper/css';
             class={`rounded-3xl carousel-wrapper z-10 ${homes.align === "left" ? "md:order-1" : ""}`}
             aria-label="Gallery"
           >
-<div id="gallery" class="relative w-full" data-carousel="slide">
-    <!-- Carousel wrapper -->
-    <div class="relative h-56 overflow-hidden rounded-sm md:h-96">
-         <!-- Items -->
-      {homes.images.map((Items) => (
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <Image src={Items.image} class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="" width="2000" height="924">
-        </div>
-      ))}
-    </div>
-    <!-- Slider indicators -->
-    <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-2 left-1/2">
-      {homes.images.map((Items) => (  
-      <button type="button" class="lg:w-2 lg:h-2 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-      ))}
-    </div>
-    <!-- Slider controls -->
-    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-2 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <Icon name="mdi:chevron-left" class="w-8 h-8 text-white dark:text-gray-800" />
-            <span class="sr-only">Previous</span>
-        </span>
-    </button>
-    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-2 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <Icon name="mdi:chevron-right" class="w-8 h-8 text-white dark:text-gray-800" />
-            <span class="sr-only">Next</span>
-        </span>
-    </button>
-</div>
-
+            <div id="gallery" class="relative w-full" data-carousel="slide">
+              <!-- Carousel wrapper -->
+              <div class="relative h-56 overflow-hidden rounded-sm md:h-96">
+               <!-- Items -->
+               {homes.images.map((Items) => (
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <Image src={Items.image} class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="" width="2000" height="924" />
+                </div>
+                ))}
+              </div>
+              <!-- Slider indicators -->
+              <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-2 left-1/2">
+                {homes.images.map((Items) => (  
+                <button type="button" class="lg:w-2 lg:h-2 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0" />
+                ))}
+              </div>
+            </div>
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-2 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <Icon name="mdi:chevron-left" class="w-8 h-8 text-white dark:text-gray-800" />
+                <span class="sr-only">Previous</span>
+              </span>
+            </button>
+            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-2 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <Icon name="mdi:chevron-right" class="w-8 h-8 text-white dark:text-gray-800" />
+                <span class="sr-only">Next</span>
+              </span>
+            </button>
           </section>
           <div
             class={` ${
@@ -96,4 +95,3 @@ import 'swiper/css';
       </>
     ))
   }
-</section>
