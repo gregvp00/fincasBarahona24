@@ -1,0 +1,49 @@
+---
+import { Icon } from "astro-icon/components";
+import testimonialsData from "@/data/testimonialsData.json";
+---
+
+<section class="container mx-auto p-10 md:py-12 px-0 md:p-8 md:px-0">
+  <section
+    class="p-5 md:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 items-start"
+  >
+    {
+      testimonialsData.map((data) => (
+        <section
+          class={`p-5 py-10 text-center transform duration-500 hover:-translate-y-2 cursor-pointer ${data.color}`}
+        >
+          <a
+            href="https://www.booking.com/hotel/es/finca-barahona.html#tab-reviews"
+            target="_blank"
+          >
+            <h1 class="text-2xl lg:text-4xl text-center mx-auto">
+              {data.name}
+            </h1>
+            <div class="space-x-1 flex justify-center mt-10">
+              {Array.from({ length: data.rate / 2 }).map(() => (
+                <Icon
+                  name="mdi:star"
+                  class="w-5 h-5 mx-px fill-current text-orange-600"
+                />
+              ))}
+              {Array.from({ length: (data.rate % 2) / 1 }).map(() => (
+                <Icon
+                  name="mdi:star-half-full"
+                  class="w-5 h-5 mx-px fill-current text-orange-600"
+                />
+              ))}
+              {Array.from({ length: (10 - data.rate) / 2 }).map(() => (
+                <Icon
+                  name="mdi:star-outline"
+                  class="w-5 h-5 mx-px fill-current text-orange-600"
+                />
+              ))}
+            </div>
+            <h1 class="text-3xl my-5">{data.title}</h1>
+            <p class="mb-5">{data.description}</p>
+          </a>
+        </section>
+      ))
+    }
+  </section>
+</section>

@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Violeta",
+    "color": "bg-purple-50",
+    "rate": 10,
+    "title": "All perfect",
+    "description": "The cleaning is 10/10. The location is also good to disconnect for a few days. We have been there during a cold time and it was a bit cold in the room although I have to say that there were heating in the rooms and they worked perfectly."
+  },
+  {
+    "id": 2,
+    "name": "Maider",
+    "color": "bg-green-50",
+    "rate": 9,
+    "title": "Wonderful",
+    "description": "Wonderful place to relax, with total disconnection. Mountain views are amazing and no noise. The very cozy house and the perfect treatment received. The pool and barbecue are a luxury."
+  },
+  {
+    "id": 3,
+    "name": "Mar",
+    "color": "bg-red-50",
+    "rate": 9,
+    "title": "Excellent stay between friends",
+    "description": "The incredible pool, good location to bring together several friends or friends, the great owner! We were very comfortable."
+  },
+  {
+    "id": 4,
+    "name": "Vicky",
+    "color": "bg-blue-50",
+    "rate": 10,
+    "title": "Recommended 100%",
+    "description": "I liked everything in general, a very nice and cozy house, the pool one last. A good place to spend a few quiet days. We will repeat for sure."
+  }
+]

@@ -3,11 +3,17 @@ import { Icon } from "astro-icon/components";
 import { Image } from 'astro:assets';
 import bodyData from "@/data/bodyData.json";
 import homesData from "@/data/homesData.json";
+import Map from "@/components/Map.astro";
+import Testimonial from "@/components/Testimonial.astro";
 
 // import Swiper JS
 import Swiper from 'swiper';
 // import Swiper styles
 import 'swiper/css';
+
+let bodyOverview = bodyData.find(body => body.id === 1);
+let bodyTestimonial = bodyData.find(body => body.id === 2);
+let bodyFAQ = bodyData.find(body => body.id === 3);
 
 ---
 
@@ -15,20 +21,20 @@ import 'swiper/css';
 
 <section class="my-0 mx-auto w-full lg:max-w-7xl px-8 grid gap-8">
   {
-    bodyData.map((body) => (
+    bodyOverview && (
       <>
         <div class="md:mb-2 mb-6 mx-auto relative flex rounded-full bg-white w-max border border-gray-400/70">
-          <span class="inline-flex gap-3 px-4 py-2 justify-center text-center items-center text-sm text-[#475569]">
-            {body.badge}
-            <Icon name="mdi:hand-wave" />
+          <span class="inline-flex gap-3 px-4 py-2 justify-center text-center items-center text-sm text-[#475569]" id="features">
+            {bodyOverview.badge}
+            <Icon name="mdi:format-list-text" />
           </span>
         </div>
-        <h1 class="text-2xl lg:text-4xl text-center mx-auto">{body.title}</h1>
+        <h1 class="text-2xl lg:text-4xl text-center mx-auto">{bodyOverview.title}</h1>
         <div class="text-base lg:text-xl max-w-3xl text-black/60 text-center mx-auto pb-6">
-          {body.description}
+          {bodyOverview.description}
         </div>
       </>
-    ))
+    )
   }
   {
     homesData.map((homes) => (
@@ -95,3 +101,31 @@ import 'swiper/css';
       </>
     ))
   }
+  {
+    bodyTestimonial && (
+  <div class="md:mb-2 mb-6 mx-auto relative flex rounded-full bg-white w-max border border-gray-400/70">
+    <span class="inline-flex gap-3 px-4 py-2 justify-center text-center items-center text-sm text-[#475569]" id="testimonials">
+      {bodyTestimonial.badge}
+      <Icon name="mdi:message-badge" />
+    </span>
+  </div>
+  <h1 class="text-2xl lg:text-4xl text-center mx-auto">{bodyTestimonial.title}</h1>
+  <Testimonial />
+  
+  )
+  }
+  {
+    bodyFAQ && (
+  <div class="md:mb-2 mb-6 mx-auto relative flex rounded-full bg-white w-max border border-gray-400/70">
+    <span class="inline-flex gap-3 px-4 py-2 justify-center text-center items-center text-sm text-[#475569]" id="FAQ">
+      {bodyFAQ.badge}
+      <Icon name="mdi:help-circle" />
+    </span>
+  </div>
+  <h1 class="text-2xl lg:text-4xl text-center mx-auto">{bodyFAQ.title}</h1>
+  <Map />
+  <h1 class="text-2xl lg:text-4xl text-center mx-auto">{bodyFAQ.title2}</h1>
+  
+  )
+  }
+</section>

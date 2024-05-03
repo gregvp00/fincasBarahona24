@@ -11,10 +11,11 @@
 -Actualizar diseño de la interfaz de usuario
 -Implementar funcionalidad de notificaciones
 -Realizar pruebas de usabilidad y accesibilidad del sistema
+-Cambiar mapa embed de google > implementación directa (posiblemente usando OpenStreetMap)
 
 Revisar configuración mails//
 
-## Resolver errores y problemas conocidos:
+## Resolver errores y problemas graves:
 
 - [NOT SOLVED] Scroll lateral durante las diapositiva (derecha) | Necesita rehacer como componente de imágen
 
