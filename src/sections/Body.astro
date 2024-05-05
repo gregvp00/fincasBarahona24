@@ -4,6 +4,7 @@ import { Image } from 'astro:assets';
 import bodyData from "@/data/bodyData.json";
 import homesData from "@/data/homesData.json";
 import Map from "@/components/Map.astro";
+import FAQDropdown from "@/components/FAQDropdown.astro";
 import Testimonial from "@/components/Testimonial.astro";
 
 // import Swiper JS
@@ -41,12 +42,12 @@ let bodyFAQ = bodyData.find(body => body.id === 3);
       <>
         <div class="grid md:grid-cols-2 gap-y-8 mb-8 border-b md:border-none border-gray-800/60 border-dashed">
           <section
-            class={`rounded-3xl carousel-wrapper z-10 ${homes.align === "left" ? "md:order-1" : ""}`}
+            class={`carousel-wrapper z-10 ${homes.align === "left" ? "md:order-1" : ""}`}
             aria-label="Gallery"
           >
             <div id="gallery" class="relative w-full" data-carousel="slide">
               <!-- Carousel wrapper -->
-              <div class="relative h-56 overflow-hidden rounded-sm md:h-96">
+              <div class="relative h-56 overflow-hidden rounded-sm md:h-96 border border-slate-500 drop-shadow">
                <!-- Items -->
                {homes.images.map((Items) => (
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -117,15 +118,15 @@ let bodyFAQ = bodyData.find(body => body.id === 3);
   {
     bodyFAQ && (
   <div class="md:mb-2 mb-6 mx-auto relative flex rounded-full bg-white w-max border border-gray-400/70">
-    <span class="inline-flex gap-3 px-4 py-2 justify-center text-center items-center text-sm text-[#475569]" id="FAQ">
+    <span class="inline-flex gap-3 px-4 py-2 justify-center text-center items-center text-sm text-[#475569]" id="faq">
       {bodyFAQ.badge}
       <Icon name="mdi:help-circle" />
     </span>
   </div>
   <h1 class="text-2xl lg:text-4xl text-center mx-auto">{bodyFAQ.title}</h1>
   <Map />
-  <h1 class="text-2xl lg:text-4xl text-center mx-auto">{bodyFAQ.title2}</h1>
-  
+  <h1 class="mt-8 text-2xl lg:text-4xl text-center mx-auto">{bodyFAQ.title2}</h1>
+  <FAQDropdown />
   )
   }
 </section>
