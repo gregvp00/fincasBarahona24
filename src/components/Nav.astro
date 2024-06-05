@@ -19,7 +19,7 @@ interface navItems {
     aria-label="Toggle Navigation"
   />
   <label
-    class="hamburger md:hidden w-8 h-8 relative block z-10 cursor-pointer pt-1 transition"
+    class="hamburger md:hidden w-6 h-6 relative block z-10 cursor-pointer pt-1 transition"
     for="hamburger-toggle"
   >
     <span class="slice block w-full h-[2px] bg-[#36374c] transition"></span>
@@ -84,7 +84,7 @@ interface navItems {
     }
 
     .hamburger-container .checkbox:checked ~ .hamburger .slice:nth-child(1) {
-      transform: translateY(12px) rotate(45deg);
+      transform: translateY(9px) rotate(45deg);
     }
 
     .hamburger-container .checkbox:checked ~ .hamburger .slice:nth-child(2) {
@@ -92,11 +92,11 @@ interface navItems {
     }
 
     .hamburger-container .checkbox:checked ~ .hamburger .slice:nth-child(3) {
-      transform: translateY(-12px) rotate(-45deg);
+      transform: translateY(-9px) rotate(-45deg);
     }
 
     .hamburger .slice:not(:first-child) {
-      margin-top: 10px;
+      margin-top: 7px;
     }
 
     .drawer {
@@ -115,3 +115,21 @@ interface navItems {
     color: #3b82f6;
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var links = document.querySelectorAll(".nav-list-item a");
+    links.forEach(function (link) {
+      link.addEventListener("click", function () {
+        uncheck();
+      });
+    });
+  });
+
+  function uncheck() {
+    var checkbox = document.querySelector(".checkbox") as HTMLInputElement;
+    if (checkbox) {
+      checkbox.checked = false;
+    }
+  }
+</script>
