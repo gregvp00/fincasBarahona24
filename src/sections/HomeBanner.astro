@@ -1,6 +1,14 @@
 ---
 import { Icon } from "astro-icon/components";
+import { Image } from 'astro:assets';
 import homeData from "@/data/homeData.json";
+
+
+
+// import Swiper JS
+import Swiper from 'swiper';
+// import Swiper styles
+import 'swiper/css';
 
 interface homeItems {
   badge: string;
@@ -13,25 +21,28 @@ interface homeItems {
   {
     homeData.map((home) => (
       <>
-        <section class="pt-3 mb-[-20px] z-20 h-[85vh] w-screen overflow-hidden">
-          <div class="slider z-10">
-            <div class="slide" />
-            <div class="slide" />
-            <div class="slide" />
-            <div class="slide" />
-            <div class="slide" />
-            <div class="slide" />
-          </div>
-          <div class="mb-8 mx-auto relative flex rounded-full bg-white w-max border border-gray-400">
+        <section class="mb-[-20px] z-20 h-[85vh] w-screen overflow-hidden">
+          <div id="gallery" class="relative w-full h-[85vh] z-0" data-carousel="slide">
+              <!-- Carousel wrapper -->
+              <div class="h-full overflow-hidden">
+               <!-- Items -->
+               {home.images.map((Items) => (
+                <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                <Image src={Items.image} class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="" width="2000" height="924" />
+                </div>
+                ))}
+              </div>
+            </div>
+          <div class="absolute top-3 left-1/2 -translate-x-1/2 rounded-full bg-white border border-gray-400">
             <span class="inline-flex gap-3 px-4 py-2 justify-center text-center items-center text-sm text-[#475569]">
               {home.badge}
               <Icon name="mdi:hand-wave" />
             </span>
           </div>
-          <h1 class="mb-6 text-center mx-auto relative text-white drop-shadow  text-6xl font-semibold">
+          <h1 class="absolute top-24 left-1/2 -translate-x-1/2 text-center text-white drop-shadow text-6xl font-semibold">
             {home.title}
           </h1>
-          <div class="text-center relative text-white drop-shadow-md text-xl">
+          <div class="absolute top-40 left-1/2 w-full -translate-x-1/2 text-center text-white drop-shadow-md text-xl">
             {home.description}
           </div>
         </section>
@@ -63,63 +74,3 @@ interface homeItems {
     ))
   }
 </section>
-
-<style>
-  .slider .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 85vh;
-    background-size: cover;
-    background-clip: padding-box;
-    background-position: center;
-    animation: slider 15s infinite;
-  }
-  .slider .slide:nth-child(1) {
-    background-image: url("/images/Barahona/1.jpg");
-    animation-delay: 0s;
-  }
-
-  .slider .slide:nth-child(2) {
-    background-image: url("/images/Barahona/2.jpg");
-    animation-delay: -2.5s;
-  }
-
-  .slider .slide:nth-child(3) {
-    background-image: url("/images/Bahoruco/1.jpg");
-    animation-delay: -5s;
-  }
-
-  .slider .slide:nth-child(4) {
-    background-image: url("/images/Barahona/3.jpg");
-    animation-delay: -7.5s;
-  }
-
-  .slider .slide:nth-child(5) {
-    background-image: url("/images/Bohechio/1.jpg");
-    animation-delay: -10s;
-  }
-
-  .slider .slide:nth-child(6) {
-    background-image: url("/images/Barahona/4.jpg");
-    animation-delay: -12.5s;
-  }
-
-  @keyframes slider {
-    0%,
-    14%,
-    100% {
-      transform: translateX(0);
-      animation-timing-function: ease;
-    }
-    17% {
-      transform: translateX(-100%);
-      animation-timing-function: step-end;
-    }
-    97% {
-      transform: translateX(100%);
-      animation-timing-function: ease;
-    }
-  }
-</style>

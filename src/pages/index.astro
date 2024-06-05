@@ -1,5 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import Loading from "@/sections/Loading.astro";
 import HomeBanner from "@/sections/HomeBanner.astro";
 import Header from "@/sections/Header.astro";
 import Footer from "@/sections/Footer.astro";
@@ -8,6 +9,7 @@ import Body from "@/sections/Body.astro";
 
 <Layout title="Fincas Barahona">
   <main>
+    <Loading />
     <Header />
     <div class="relative z-10 mt-[72px] h-screen">
       <HomeBanner />

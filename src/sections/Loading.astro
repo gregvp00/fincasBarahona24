@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+import logo from "/public/hero-logo.svg";
+---
+
+<style>
+  @keyframes fade-out-loading {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100vh);
+    }
+  }
+  .animate-fade-out-loading {
+    animation: fade-out-loading 1s ease-out both;
+  }
+</style>
+<div class="loading relative z-50">
+  <div
+    class="loading_bg fixed inset-0 bg-gradient-to-b from-white via-white via-80% h-[130vh] w-screen opacity-100 transition-all"
+  >
+    <div
+      class="loading_img-container flex w-screen h-screen justify-center items-center animate-blurred-fade-in animate-delay-300 animate-duration-700"
+    >
+      <Image src={logo} alt="logo" height="80em" width="auto" />
+    </div>
+  </div>
+</div>
+<script>
+  function loadingFade() {
+    const loading = document.querySelector(".loading");
+    loading.classList.add("animate-fade-out-loading");
+  }
+  function loadingRemove() {
+    const loading = document.querySelector(".loading");
+    loading.style.display = "none";
+  }
+
+  const firstVisit = localStorage.getItem("visited");
+
+  if (firstVisit === null) {
+    window.setInterval(loadingFade, 2000);
+    window.setInterval(loadingRemove, 5000);
+    localStorage.setItem("visited", 1);
+  } else {
+    window.setInterval(loadingFade, 2000);
+    window.setInterval(loadingRemove, 5000);
+    localStorage.setItem("visited", 1);
+  }
+</script>
