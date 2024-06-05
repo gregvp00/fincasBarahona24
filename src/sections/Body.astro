@@ -7,8 +7,6 @@ import Map from "@/components/Map.astro";
 import FAQDropdown from "@/components/FAQDropdown.astro";
 import Testimonial from "@/components/Testimonial.astro";
 
-// import Swiper JS
-import Swiper from 'swiper';
 // import Swiper styles
 import 'swiper/css';
 
@@ -57,7 +55,7 @@ let bodyFAQ = bodyData.find(body => body.id === 3);
               </div>
               <!-- Slider indicators -->
               <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-2 left-1/2">
-                {homes.images.map((Items) => (  
+                {homes.images.map(() => (  
                 <button type="button" class="lg:w-2 lg:h-2 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0" />
                 ))}
               </div>
