@@ -7,10 +7,10 @@
     "buttonBooking": "Book now with Booking",
     "images": [
       {
-        "image": "/images/Barahona/3.jpg"
+        "image": "/images/Exterior/1.jpg"
       },
       {
-        "image": "/images/Barahona/4.jpg"
+        "image": "/images/Barahona/3.jpg"
       },
       {
         "image": "/images/Barahona/17.jpg"
@@ -19,16 +19,16 @@
         "image": "/images/Barahona/18.jpg"
       },
       {
-        "image": "/images/Exterior/1.jpg"
+        "image": "/images/Exterior/2.jpg"
       },
       {
-        "image": "/images/Exterior/2.jpg"
+        "image": "/images/Exterior/4.jpg"
       },
       {
         "image": "/images/Exterior/3.jpg"
       },
       {
-        "image": "/images/Exterior/4.jpg"
+        "image": "/images/Exterior/7.jpg"
       },
       {
         "image": "/images/Exterior/5.jpg"
@@ -37,7 +37,7 @@
         "image": "/images/Exterior/6.jpg"
       },
       {
-        "image": "/images/Exterior/7.jpg"
+        "image": "/images/Exterior/8.jpg"
       }
     ]
   }
