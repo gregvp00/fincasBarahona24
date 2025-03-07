@@ -1,13 +1,16 @@
 ---
 import { Icon } from "astro-icon/components";
-import faqData from "@/data/faqData.json";
+import { getI18N } from "@/i18n/index";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <div
   class="mx-auto mb-12 grid w-full md:w-[80%] divide-y divide-neutral-200 bg-white border border-gray-400/70 rounded px-6 py-2 md:p-8 md:py-4"
 >
   {
-    faqData.map((data) => (
+    i18n.FAQ.CONTENT.map((data) => (
       <div class="py-5">
         <details class="group">
           <summary class="flex cursor-pointer list-none items-center justify-between">

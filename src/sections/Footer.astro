@@ -2,6 +2,11 @@
 import footerNavData from "@/data/footerData.json";
 import { Image } from "astro:assets";
 import logo from "/public/hero-logo.svg";
+
+import { getI18N } from "@/i18n/index";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <footer class="bg-white">
@@ -17,7 +22,7 @@ import logo from "/public/hero-logo.svg";
       <div class="col-span-6">
         <div class="grid grid-cols-2 md:grid-cols-8 lg:grid-cols-12">
           {
-            footerNavData.map((footerLinks) => (
+            i18n.FOOTER.map((footerLinks) => (
               <div class="col-span-1 md:col-span-4">
                 <h3 class="font-bold text-base mb-2">{footerLinks.title}</h3>
                 <ul class="mt-4">

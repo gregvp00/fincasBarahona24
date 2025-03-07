@@ -20,3 +20,7 @@ Revisar configuración mails//
 - [NOT SOLVED] Scroll lateral durante las diapositiva (derecha) | Necesita rehacer como componente de imágen
 
 [SOLVED] Lazy load en el logo footer | img > Image component
+
+## NOTAS
+
+- Debido a lista de objetos muy reducida, footer se ha incluido junto a sus redirecciones en sus traducciones correspondientes

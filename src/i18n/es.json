@@ -1,0 +1,121 @@
+{
+  "SEO_TITLE": "Fincas Barahona",
+  "SEO_DESCRIPTION": "Alojamientos en Altea con Wi-Fi gratis y vistas a la montaña.",
+  "HEADER": {
+    "LOGO": "Volver a la página de inicio"
+  },
+  "NAV": {
+    "FEATURES": "Características",
+    "TESTIMONIALS": "Testimonios",
+    "FAQ": "FAQ",
+    "CONTACT": "Contacto"
+  },
+  "HOME": {
+    "BADGE": "¡Descubre FincasBarahona!",
+    "TITLE": "¡Bienvenido!",
+    "DESCRIPTION": "Alojamientos privados en Altea.",
+    "BUTTONAIRBNB": "Reserva ahora con Airbnb",
+    "BUTTONBOOKING": "Reserva ahora con Booking"
+  },
+  "FEATURES": {
+    "BADGE": "Características",
+    "TITLE": "Disfruta de la belleza natural de la Costa Blanca",
+    "DESCRIPTION": "Estas casas de vacaciones se encuentran en la hermosa localidad de Altea, España. Cuentan con conexión Wi-Fi gratuita y vistas a la montaña. La playa más cercana está a solo 3 km y a 5 minutos en coche.",
+    "FEATURESDATA": {
+      "BARAHONA": {
+        "TITLE": "Casa Barahona",
+        "CONTENT": "Esta espaciosa casa de vacaciones cuenta con 4 dormitorios, televisión, cocina totalmente equipada con lavavajillas y horno, 2 baños con bañera, lavadora y chimenea. Los huéspedes pueden disfrutar del ambiente de los alrededores, de una zona de comedor al aire libre y de una piscina privada."
+      },
+      "BAHORUCO": {
+        "TITLE": "Casa Bahoruco",
+        "CONTENT": "Esta acogedora casa de vacaciones cuenta con 2 dormitorios, televisión, cocina totalmente equipada con lavavajillas y horno y baño. Los huéspedes pueden disfrutar de la zona de comedor compartida al aire libre y de la piscina comunitaria."
+      },
+      "BOHECHIO": {
+        "TITLE": "Casa Bohechio",
+        "CONTENT": "Esta acogedora casa de vacaciones cuenta con un dormitorio, televisión, cocina totalmente equipada con lavavajillas y horno, baño y chimenea. Los huéspedes pueden disfrutar de la zona de comedor compartida al aire libre y de la piscina comunitaria."
+      }
+    }
+  },
+  "TESTIMONIALS": {
+    "BADGE": "Testimonios",
+    "TITLE": "Esto es lo que dicen nuestros clientes sobre nuestras casas de vacaciones:"
+  },
+  "FAQ": {
+    "BADGE": "FAQ",
+    "TITLE": "Explora la zona",
+    "TITLE2": "Tenemos las respuestas que necesitas:",
+    "CONTENT": [
+      {
+        "id": 0,
+        "title": "¿Cuántos dormitorios tienen estas viviendas?",
+        "content": "Casa Barahona: Cuatro dormitorios y dos baños. | Casa Bahoruco: Dos dormitorios y un baño. | Casa Bohecio: Un dormitorio y un baño."
+      },
+      {
+        "id": 1,
+        "title": "¿A qué distancia están las casas del centro de Altea?",
+        "content": "Están a 3 km del centro de Altea."
+      },
+      {
+        "id": 2,
+        "title": "¿Cuáles son los horarios de entrada y salida?",
+        "content": "El horario de entrada es de 17:00 a 20:00 y de salida de 8:00 a 11:00."
+      },
+      {
+        "id": 3,
+        "title": "¿Qué actividades están prohibidas en estas viviendas?",
+        "content": "No se permiten fiestas de despedida, despedidas de solter@ y otros eventos similares."
+      },
+      {
+        "id": 4,
+        "title": "¿Existe un depósito de daños reembolsable?",
+        "content": "Se requiere un depósito de daños de 300€ (200€ en caso de Casa Bahoruco/Bohecio) a la llegada. Se cobrará en efectivo y se le reembolsará a la salida. La fianza se reembolsará íntegramente, en efectivo, previa inspección de la propiedad."
+      }
+    ]
+  },
+  "FOOTER": [
+    {
+      "title": "Acceso directos",
+      "items": [
+        {
+          "label": "Características",
+          "href": "#features",
+          "target": "_self"
+        },
+        {
+          "label": "Testimonios",
+          "href": "#testimonials",
+          "target": "_self"
+        },
+        {
+          "label": "FAQ",
+          "href": "#faq",
+          "target": "_self"
+        }
+      ]
+    },
+    {
+      "title": "Links",
+      "items": [
+        {
+          "label": "Acerca de",
+          "href": "/",
+          "target": "_blank"
+        },
+        {
+          "label": "Booking",
+          "href": "https://www.booking.com/Share-6oCAhJ",
+          "target": "_blank"
+        },
+        {
+          "label": "Airbnb",
+          "href": "https://www.airbnb.com/rooms/1110735436061203137",
+          "target": "_blank"
+        }
+      ]
+    }
+  ],
+  "ERROR_404": {
+    "TITLE": "Página no encontrada",
+    "BACK_HOMEPAGE_BTN": "Volver a la página principal"
+  }
+}

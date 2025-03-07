@@ -1,5 +1,9 @@
 ---
 import Nav from "@/components/Nav.astro";
+import { getI18N } from "@/i18n/index";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <header
@@ -9,7 +13,12 @@ import Nav from "@/components/Nav.astro";
   <section class="header--container flex items-stretch justify-between mx-6">
     <div class="">
       <a href="/">
-        <img src="/hero-logo.svg" alt="logo" class="h-12" />
+        <img
+          src="/hero-logo.svg"
+          alt="logo"
+          title=`${i18n.HEADER.LOGO}`
+          class="h-12"
+        />
       </a>
     </div>
     <section class="flex items-center">

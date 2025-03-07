@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
-import navItems from "@/data/navData.json";
+import navData from "@/data/navData.json";
 
 interface navItems {
   href: string;
@@ -9,6 +9,23 @@ interface navItems {
   name: string;
   isArrow: boolean;
 }
+
+import { getI18N } from "@/i18n/index";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { languages } from "@/i18n/ui";
+import { getLangFromUrl, useTranslatedPath } from "@/i18n/utils.ts";
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+
+const navTData = navData.map((link) => ({
+  ...link,
+  title: i18n.NAV[link.id],
+}));
 ---
 
 <div class="hamburger-container transition md:flex md:items-center">
@@ -28,18 +45,28 @@ interface navItems {
   </label>
   <div class="drawer fixed md:relative md:block md:w-auto transition">
     <ul class="nav-list p-0 list-none md:my-0 md:flex md:gap-6">
+      <ul>
+        {
+          Object.entries(languages).map(([langPrefix]) => {     
+            if (langPrefix == lang) return <></>
+            return (<li class="px-2 md:inline-block"><a href={translatePath("/", langPrefix)}>{langPrefix.toUpperCase()}</a></li>)
+          })
+        
+        }
+      </ul>
       {
-        navItems.map((item) => (
+        navTData.map((item) => (
           <li class="nav-list-item p-2 md:p-0 md:inline-block">
             <a
-              href={item.href}
+              href={item.href.startsWith('tel:') || item.href.startsWith('mailto:') || item.href.startsWith('http') 
+              ? item.href:`${getRelativeLocaleUrl(currentLocale ?? '', '')}${item.href}`}
               class={
                 "text-[#36374c] md:visible md:flex transition " +
                 item.extraclass
               }
               target={item.target ? item.target : "_self"}
             >
-              {item.name}
+              {item.title}
               {item.isArrow && (
                 <span class="ml-2 inline-block text-sm">
                   <Icon name="mdi:arrow-top-right" class="h-6 w-auto" />

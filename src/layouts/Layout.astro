@@ -6,16 +6,17 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const { lang } = Astro.params;
+const { currentLocale } = Astro;
+console.log({ currentLocale });
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={currentLocale}>
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Alojamientos en Altea con wifi gratis y vistas a la montaña."
-    />
+    <meta name="description" content="${i18n.SEO_DESCRIPTION}" />
+    <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>

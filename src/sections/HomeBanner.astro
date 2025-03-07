@@ -5,6 +5,11 @@ import homeData from "@/data/homeData.json";
 
 // import Swiper styles
 import 'swiper/css';
+
+import { getI18N } from "@/i18n/index";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <section class="pb-12 h-auto relative">
@@ -25,15 +30,15 @@ import 'swiper/css';
             </div>
           <div class="absolute top-3 left-1/2 -translate-x-1/2 rounded-full bg-white border border-gray-400">
             <span class="inline-flex gap-3 px-4 py-2 justify-center text-center items-center text-sm text-[#475569]">
-              {home.badge}
+              {i18n.HOME.BADGE}
               <Icon name="mdi:hand-wave" />
             </span>
           </div>
           <h1 class="absolute top-24 left-1/2 -translate-x-1/2 text-center text-white drop-shadow-lg text-6xl font-semibold">
-            {home.title}
+            {i18n.HOME.TITLE}
           </h1>
           <div class="absolute top-40 left-1/2 w-full -translate-x-1/2 text-center text-white drop-shadow-lg text-xl">
-            {home.description}
+            {i18n.HOME.DESCRIPTION}
           </div>
         </section>
         <section class="*:*:w-full md:*:*:w-80 flex items-stretch justify-center md:space-x-8">
@@ -44,7 +49,7 @@ import 'swiper/css';
               target="_blank"
               class="px-8 py-2 inline-flex w-max cursor-pointer items-center justify-center gap-3 md:rounded-lg bg-[#b81840] hover:bg-[#e51e51] text-white drop-shadow-md font-semibold transition-colors duration-300"
             >
-              {home.buttonAirbnb}
+              {i18n.HOME.BUTTONAIRBNB}
               <Icon name="mdi:arrow-right" class="text-3xl" />
             </a>
           </div>
@@ -55,7 +60,7 @@ import 'swiper/css';
               target="_blank"
               class="px-8 py-2 inline-flex w-max cursor-pointer items-center justify-center gap-3 md:rounded-lg bg-[#003b95] hover:bg-[#2a63b9] text-white drop-shadow-md font-semibold transition-colors duration-300"
             >
-              {home.buttonBooking}
+              {i18n.HOME.BUTTONBOOKING}
               <Icon name="mdi:arrow-right" class="text-3xl" />
             </a>
           </div>

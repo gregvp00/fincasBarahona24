@@ -1,24 +1,24 @@
 [
   {
-    "name": "Features",
+    "id": "FEATURES",
     "to": "#features",
-    "href": "/#features",
+    "href": "#features",
     "extraclass": ""
   },
   {
-    "name": "Testimonials",
+    "id": "TESTIMONIALS",
     "to": "#testimonials",
-    "href": "/#testimonials",
+    "href": "#testimonials",
     "extraclass": ""
   },
   {
-    "name": "FAQ",
+    "id": "FAQ",
     "to": "#faq",
-    "href": "/#faq",
+    "href": "#faq",
     "extraclass": ""
   },
   {
-    "name": "Contact",
+    "id": "CONTACT",
     "href": "tel:+34648648950",
     "isArrow": true,
     "target": "_blank",

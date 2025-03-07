@@ -1,0 +1,121 @@
+{
+  "SEO_TITLE": "Fincas Barahona",
+  "SEO_DESCRIPTION": "Wohnungen in Altea mit kostenlosem Wi-Fi und Bergblick.",
+  "HEADER": {
+    "LOGO": "Zurück zur Startseite"
+  },
+  "NAV": {
+    "FEATURES": "Features",
+    "TESTIMONIALS": "Testimonials",
+    "FAQ": "FAQ",
+    "CONTACT": "Kontakt"
+  },
+  "HOME": {
+    "BADGE": "Entdecken Sie FincasBarahona!",
+    "TITLE": "Willkommen!",
+    "DESCRIPTION": "Privatunterkünfte in Altea.",
+    "BUTTONAIRBNB": "Jetzt mit Airbnb buchen",
+    "BUTTONBOOKING": "Jetzt buchen mit Booking"
+  },
+  "FEATURES": {
+    "BADGE": "Features",
+    "TITLE": "Genießen Sie die natürliche Schönheit der Costa Blanca",
+    "DESCRIPTION": "Diese Ferienhäuser befinden sich in der schönen Stadt Altea, Spanien. Sie bieten kostenloses Wi-Fi und Bergblick. Der nächste Strand ist nur 3 km und eine 5-minütige Autofahrt entfernt.",
+    "FEATURESDATA": {
+      "BARAHONA": {
+        "TITLE": "Casa Barahona",
+        "CONTENT": "Dieses geräumige Ferienhaus verfügt über 4 Schlafzimmer, einen Fernseher, eine voll ausgestattete Küche mit einem Geschirrspüler und einem Backofen, 2 Badezimmer mit einer Badewanne, eine Waschmaschine und einen Kamin. Die Gäste können das Ambiente der Umgebung, einen Essbereich im Freien und einen privaten Pool genießen."
+      },
+      "BAHORUCO": {
+        "TITLE": "Casa Bahoruco",
+        "CONTENT": "Dieses gemütliche Ferienhaus verfügt über 2 Schlafzimmer, einen Fernseher, eine voll ausgestattete Küche mit einem Geschirrspüler und einem Backofen sowie ein Badezimmer. Die Gäste können den gemeinsamen Essbereich im Freien und den Gemeinschaftspool nutzen."
+      },
+      "BOHECHIO": {
+        "TITLE": "Casa Bohechio",
+        "CONTENT": "Dieses gemütliche Ferienhaus verfügt über ein Schlafzimmer, einen Fernseher, eine voll ausgestattete Küche mit Geschirrspüler und Backofen, ein Badezimmer und einen Kamin. Die Gäste können den gemeinsamen Essbereich im Freien und den Gemeinschaftspool nutzen."
+      }
+    }
+  },
+  "TESTIMONIALS": {
+    "BADGE": "Testimonials",
+    "TITLE": "Das haben unsere Kunden über unsere Ferienhäuser zu sagen:"
+  },
+  "FAQ": {
+    "BADGE": "FAQ",
+    "TITLE": "Erkunde das Gebiet",
+    "TITLE2": "Wir haben die Antworten, die Sie brauchen:",
+    "CONTENT": [
+      {
+        "id": 0,
+        "title": "Wie viele Schlafzimmer haben diese Häuser?",
+        "content": "Casa Barahona: Vier Schlafzimmer und zwei Bäder. | Casa Bahoruco: Zwei Schlafzimmer und ein Badezimmer. | Casa Bohecio: Ein Schlafzimmer und ein Badezimmer."
+      },
+      {
+        "id": 1,
+        "title": "Wie weit sind diese Wohnungen vom Zentrum von Altea entfernt?",
+        "content": "Es ist 3km vom Zentrum von Altea entfernt."
+      },
+      {
+        "id": 2,
+        "title": "Was sind die Check-in und Check-out Zeiten?",
+        "content": "Check-in ist von 17:00 Uhr bis 20:00 Uhr und Check-out ist von 8:00 Uhr bis 11:00 Uhr."
+      },
+      {
+        "id": 3,
+        "title": "Welche Aktivitäten sind in diesen Häusern verboten?",
+        "content": "Bachelors parties, stag parties, hen parties und andere ähnliche Veranstaltungen sind nicht erlaubt."
+      },
+      {
+        "id": 4,
+        "title": "Gibt es eine erstattungsfähige Kaution?",
+        "content": "Eine Schadenskaution von 300€ (200€ im Falle von Casa Bahoruco/Bohecio) ist bei der Ankunft zu hinterlegen. Diese wird in bar erhoben. Sie sollte beim Check-out zurückerstattet werden. Die Kaution wird in voller Höhe und in bar zurückerstattet, vorbehaltlich einer Inspektion des Objekts."
+      }
+    ]
+  },
+  "FOOTER": [
+    {
+      "title": "Shortcuts",
+      "items": [
+        {
+          "label": "Funktionen",
+          "href": "#features",
+          "target": "_self"
+        },
+        {
+          "label": "Testimonials",
+          "href": "#testimonials",
+          "target": "_self"
+        },
+        {
+          "label": "FAQ",
+          "href": "#faq",
+          "target": "_self"
+        }
+      ]
+    },
+    {
+      "title": "Links",
+      "items": [
+        {
+          "label": "Uber",
+          "href": "/",
+          "target": "_blank"
+        },
+        {
+          "label": "Booking",
+          "href": "https://www.booking.com/Share-6oCAhJ",
+          "target": "_blank"
+        },
+        {
+          "label": "Airbnb",
+          "href": "https://www.airbnb.com/rooms/1110735436061203137",
+          "target": "_blank"
+        }
+      ]
+    }
+  ],
+  "ERROR_404": {
+    "TITLE": "Seite nicht gefunden",
+    "BACK_HOMEPAGE_BTN": "Zurück zur Homepage"
+  }
+}
