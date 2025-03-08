@@ -23,15 +23,15 @@
     "DESCRIPTION": "These holiday homes are located in the beautiful town of Altea, Spain. They offer free Wi-Fi and mountain views. The nearest beach is just 3 km and a 5 minute drive away.",
     "FEATURESDATA": {
       "BARAHONA": {
-        "TITLE": "Casa Barahona",
+        "NAME": "Casa Barahona",
         "CONTENT": "This spacious holiday home features 4 bedrooms, a flat-screen TV, a fully equipped kitchen with a dishwasher and an oven, 2 bathrooms with a bath, a washing machine and a fireplace. Guests can enjoy the ambience of the surroundings, an outdoor dining area and a private pool."
       },
       "BAHORUCO": {
-        "TITLE": "Casa Bahoruco",
+        "NAME": "Casa Bahoruco",
         "CONTENT": "This cozy holiday home features 2 bedrooms, a flat-screen TV, a fully equipped kitchen with a dishwasher and an oven and a bathroom. Guests can enjoy the shared outdoor dining area and the communal pool."
       },
       "BOHECHIO": {
-        "TITLE": "Casa Bohechio",
+        "NAME": "Casa Bohechio",
         "CONTENT": "This cozy holiday home features a bedroom, a flat-screen TV, a fully equipped kitchen with a dishwasher and an oven, a bathroom and a fireplace. Guests can enjoy the shared outdoor dining area and the communal pool."
       }
     }

@@ -1,5 +1,6 @@
 [
   {
+    "key": "BARAHONA",
     "id": "BARAHONA",
     "align": "right",
     "icon": [
@@ -113,6 +114,7 @@
     ]
   },
   {
+    "key": "BOHECHIO",
     "id": "BOHECHIO",
     "align": "right",
     "icon": ["mdi:bed", "mdi:shower-head", "mdi:fireplace"],

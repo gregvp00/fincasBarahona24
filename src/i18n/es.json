@@ -23,15 +23,15 @@
     "DESCRIPTION": "Estas casas de vacaciones se encuentran en la hermosa localidad de Altea, España. Cuentan con conexión Wi-Fi gratuita y vistas a la montaña. La playa más cercana está a solo 3 km y a 5 minutos en coche.",
     "FEATURESDATA": {
       "BARAHONA": {
-        "TITLE": "Casa Barahona",
+        "NAME": "Casa Barahona",
         "CONTENT": "Esta espaciosa casa de vacaciones cuenta con 4 dormitorios, televisión, cocina totalmente equipada con lavavajillas y horno, 2 baños con bañera, lavadora y chimenea. Los huéspedes pueden disfrutar del ambiente de los alrededores, de una zona de comedor al aire libre y de una piscina privada."
       },
       "BAHORUCO": {
-        "TITLE": "Casa Bahoruco",
+        "NAME": "Casa Bahoruco",
         "CONTENT": "Esta acogedora casa de vacaciones cuenta con 2 dormitorios, televisión, cocina totalmente equipada con lavavajillas y horno y baño. Los huéspedes pueden disfrutar de la zona de comedor compartida al aire libre y de la piscina comunitaria."
       },
       "BOHECHIO": {
-        "TITLE": "Casa Bohechio",
+        "NAME": "Casa Bohechio",
         "CONTENT": "Esta acogedora casa de vacaciones cuenta con un dormitorio, televisión, cocina totalmente equipada con lavavajillas y horno, baño y chimenea. Los huéspedes pueden disfrutar de la zona de comedor compartida al aire libre y de la piscina comunitaria."
       }
     }

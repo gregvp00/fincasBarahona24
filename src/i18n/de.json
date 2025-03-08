@@ -23,15 +23,15 @@
     "DESCRIPTION": "Diese Ferienhäuser befinden sich in der schönen Stadt Altea, Spanien. Sie bieten kostenloses Wi-Fi und Bergblick. Der nächste Strand ist nur 3 km und eine 5-minütige Autofahrt entfernt.",
     "FEATURESDATA": {
       "BARAHONA": {
-        "TITLE": "Casa Barahona",
+        "NAME": "Casa Barahona",
         "CONTENT": "Dieses geräumige Ferienhaus verfügt über 4 Schlafzimmer, einen Fernseher, eine voll ausgestattete Küche mit einem Geschirrspüler und einem Backofen, 2 Badezimmer mit einer Badewanne, eine Waschmaschine und einen Kamin. Die Gäste können das Ambiente der Umgebung, einen Essbereich im Freien und einen privaten Pool genießen."
       },
       "BAHORUCO": {
-        "TITLE": "Casa Bahoruco",
+        "NAME": "Casa Bahoruco",
         "CONTENT": "Dieses gemütliche Ferienhaus verfügt über 2 Schlafzimmer, einen Fernseher, eine voll ausgestattete Küche mit einem Geschirrspüler und einem Backofen sowie ein Badezimmer. Die Gäste können den gemeinsamen Essbereich im Freien und den Gemeinschaftspool nutzen."
       },
       "BOHECHIO": {
-        "TITLE": "Casa Bohechio",
+        "NAME": "Casa Bohechio",
         "CONTENT": "Dieses gemütliche Ferienhaus verfügt über ein Schlafzimmer, einen Fernseher, eine voll ausgestattete Küche mit Geschirrspüler und Backofen, ein Badezimmer und einen Kamin. Die Gäste können den gemeinsamen Essbereich im Freien und den Gemeinschaftspool nutzen."
       }
     }

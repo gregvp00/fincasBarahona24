@@ -3,14 +3,6 @@ import { Icon } from "astro-icon/components";
 import navData from "@/data/navData.json";
 import langImages from "@/data/langImages.json";
 
-interface navItems {
-  href: string;
-  extraclass: string;
-  target?: string;
-  name: string;
-  isArrow: boolean;
-}
-
 import { getI18N } from "@/i18n/index";
 
 const { currentLocale } = Astro;
@@ -25,7 +17,7 @@ const translatePath = useTranslatedPath(lang);
 
 const navTData = navData.map((link) => ({
   ...link,
-  title: i18n.NAV[link.id],
+  title: i18n.NAV[link.id as keyof typeof i18n.NAV],
 }));
 ---
 
@@ -54,7 +46,7 @@ const navTData = navData.map((link) => ({
                 <li class="px-4 py-1 md:py-0 md:inline-block bg-blue-100 content-center">
                   <a href={translatePath("/", langPrefix)}>
                     <img
-                      src={langImages[langPrefix]}
+                      src={langImages[langPrefix as keyof typeof langImages]}
                       alt={langPrefix.toUpperCase()}
                       class="w-7 h-7 md:w-6 md:h-8 md:rounded-full inline-block"
                     />
@@ -66,7 +58,7 @@ const navTData = navData.map((link) => ({
               <li class="px-2 py-1 md:py-0 md:inline-block content-center">
                 <a href={translatePath("/", langPrefix)}>
                   <img
-                    src={langImages[langPrefix]}
+                    src={langImages[langPrefix as keyof typeof langImages]}
                     alt={langPrefix.toUpperCase()}
                     class="w-7 h-7 md:w-6 md:h-8 md:rounded-full inline-block"
                   />

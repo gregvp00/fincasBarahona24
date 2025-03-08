@@ -14,10 +14,11 @@ import { getI18N } from "@/i18n/index";
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 
+
 const featuresTData = featuresData.map((link) => ({
   ...link,
-  title: i18n.FEATURES.FEATURESDATA[link.id].TITLE,
-  content: i18n.FEATURES.FEATURESDATA[link.id].CONTENT,
+  title: i18n.FEATURES.FEATURESDATA[link.key as keyof typeof i18n.FEATURES.FEATURESDATA].NAME,
+  content: i18n.FEATURES.FEATURESDATA[link.key as keyof typeof i18n.FEATURES.FEATURESDATA].CONTENT,
 }));
 ---
 
