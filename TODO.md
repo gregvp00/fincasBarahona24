@@ -1,26 +1,21 @@
-## Cosas a implementar
-
--Implementar autenticación de usuarios
--Optimizar rendimiento del sistema
--Actualizar documentación del proyecto
--Realizar pruebas de unidad y pruebas de integración
--Implementar calendario sincronizado a la API Booking/Airbnb
--Implementar función para contestar peticiones/mensajes
--Implementar funcionalidad de búsqueda avanzada
--Realizar pruebas de carga y estrés del sistema
--Actualizar diseño de la interfaz de usuario
--Implementar funcionalidad de notificaciones
--Realizar pruebas de usabilidad y accesibilidad del sistema
--Cambiar mapa embed de google > implementación directa (posiblemente usando OpenStreetMap)
-
-Revisar configuración mails//
-
-## Resolver errores y problemas graves:
-
-- [NOT SOLVED] Scroll lateral durante las diapositiva (derecha) | Necesita rehacer como componente de imágen
-
-[SOLVED] Lazy load en el logo footer | img > Image component
-
-## NOTAS
-
-- Debido a lista de objetos muy reducida, footer se ha incluido junto a sus redirecciones en sus traducciones correspondientes
+- [ ] ADD
+	- [ ] Dutch to the languages
+	- [ ] AUTH to the user
+	- [ ] Sinc. calendar via API
+	- [ ] Smart form to book
+		- [ ] Form
+		- [ ] Reply (via Email, Whatsapp or SMS)
+	- [ ] Alert from the booking (to Email & Whatsapp)
+- [ ] SWITCH
+	- [ ] Google Maps to third party with more intuitive controls
+- [ ] UPDATE
+	- [ ] New design
+	- [ ] README
+- [ ] OPTIMIZE
+	- [ ] Performance to the limit
+	- [ ] Stress tests and DDOS
+- [ ] SOLVE BUGS
+	- [ ] Lateral scroll during image slides (must create a new component)
+	- [x] Lazy load on footer Logo (from img to Image component)
+- [ ] NOTES
+	- [ ] Object list in footerData.json was too small, all the data is attach into i18n translations
