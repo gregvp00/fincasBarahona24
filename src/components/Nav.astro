@@ -43,20 +43,20 @@ const navTData = navData.map((link) => ({
           Object.entries(languages).map(([langPrefix]) => {
             if (langPrefix == lang)
               return (
-                <li class="px-4 py-1 md:py-0 md:inline-block bg-blue-100 content-center">
-                  <a href={translatePath("/", langPrefix)}>
+                <a href={translatePath("/", langPrefix)}>
+                  <li class="px-4 py-1 md:py-0 md:inline-block bg-blue-100 content-center">
                     <img
                       src={langImages[langPrefix as keyof typeof langImages]}
                       alt={langPrefix.toUpperCase()}
                       class="w-7 h-7 md:w-6 md:h-8 md:rounded-full inline-block"
                     />
                     {langPrefix.toUpperCase()}
-                  </a>
-                </li>
+                  </li>
+                </a>
               );
             return (
-              <li class="px-2 py-1 md:py-0 md:inline-block content-center">
-                <a href={translatePath("/", langPrefix)}>
+              <a href={translatePath("/", langPrefix)}>
+                <li class="px-2 py-1 md:py-0 md:inline-block content-center">
                   <img
                     src={langImages[langPrefix as keyof typeof langImages]}
                     alt={langPrefix.toUpperCase()}
@@ -65,8 +65,8 @@ const navTData = navData.map((link) => ({
                   <span class="md:hidden lg:inline">
                     {langPrefix.toUpperCase()}
                   </span>
-                </a>
-              </li>
+                </li>
+              </a>
             );
           })
         }
